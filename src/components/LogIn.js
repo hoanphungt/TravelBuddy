@@ -19,10 +19,11 @@ if (result.length<1) { alert('invalid username') }
 this.signingIn(this.state.id)
 }
 
+
 signingIn = (theID) => {
   store.dispatch({
     type: 'MATCHING',
-    payload: theID
+    payload:  this.props.travelers[theID-1]
   })
 }
   
