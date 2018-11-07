@@ -2,17 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class MatchPerson extends Component {
-/*  state = {
-
-  }
-
-          <img src={require(`${srcString}`)}alt ='avatar'/>
-
-  sourcePhoto = () => {
-    this.setState({
-      scrString :this.props.travelers.filter(traveler => traveler.id == id)[0].photo
-    })
-  }*/
   render() {
     const id = this.props.match.params.id
 
