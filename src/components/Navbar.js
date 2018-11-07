@@ -1,14 +1,16 @@
 import React from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
+import store from '../store'
 
 const Navbar = (props) => {
   // setTimeout(() => {
   //   props.history.push('/about')
   // }, 2000)
-
+const string = store.getState()[1].photo
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
+      <img  src={require(`${string}`)} alt='avatar'/>
         <a className="brand-logo">Travel Buddy</a>
         <ul className="right">
           <li><NavLink to="/home">Home</NavLink></li>
@@ -20,4 +22,6 @@ const Navbar = (props) => {
   )
 }
 
-export default withRouter(Navbar)
+
+
+export default  withRouter(Navbar) 
