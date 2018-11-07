@@ -19,9 +19,7 @@ class MatchPerson extends Component {
         <div>
           <strong>Feedback:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].feedback}
 
-        </div>
-        
-          
+        </div>         
       </>
     )
   }
