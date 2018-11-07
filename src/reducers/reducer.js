@@ -1,7 +1,7 @@
 import travelers from '../data/travelers'
 const currentUser = {
   id: 1,
-  photo: '',
+  photo: './images/16.PNG',
   firstName: 'Haleema',
   lastName: 'Greenwood',
   location: 'London',
