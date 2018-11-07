@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import MatchProfile from './MatchProfile'
+import { Link } from 'react-router-dom'
 
-class MatchingList extends Component {
-    handleOnClick = () => {
-        return <MatchProfile />
-    }
-    
-    render() {
+class MatchingList extends Component {    
+    render() {        
         return (
             <div className='matchingList'>
                 <ul>
@@ -15,10 +11,8 @@ class MatchingList extends Component {
                         {this.props.matches.map(match => (
                             <div>
                                 <image className='photo' href=''/>
-                                <p>{match.firstName} {match.lastName}</p>
-                                <p>{match.age}</p>
+                                <Link to={`/matches/${match.id}`} id={match.id}>{match.firstName} {match.lastName}</Link>
                                 <p>{match.preferences}</p>
-                                <button onClick={() => this.handleOnClick()}>Check</button>
                             </div>
                         ))}
                     </li>
