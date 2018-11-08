@@ -22,9 +22,8 @@ this.signingIn(this.state.id)
 
 signingIn = (theID) => {
   store.dispatch({
-    type: 'MATCHING',
+    type: 'SIGN_IN',
     payload: this.props.travelers[theID-1]
-
   })
 }
   
