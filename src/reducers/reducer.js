@@ -1,7 +1,24 @@
 import travelers from '../data/travelers'
 
-
-const reducer = (state = [travelers] , action = {}) => {
+const currentUser =  {
+  id: 3,
+  photo: './images/18.PNG',
+  firstName: 'Joann',
+  lastName: 'Decker',
+  age : 34,
+  location: 'Paris',
+  preferences: ['Nightlife, Nature'],
+  languages: [],
+  stars: 4,
+  feedback: ['Joann habitually plans and sequences own work and that of others. Ensures that objectives are clearly established, and that work is systematically carried out in order to achieve the objectives. Communicates plans clearly to others. A natural leader. People tend to listen and follow her example and guidance. Haleema is chosen as leader without making an issue of leadership.',
+            'Always eager to take on a new task, whether hard or simple, and tackles it diligently, without question or complaint. This positive attitude inspires others too.',
+            'Prioritizes and sequences own tasks and those of other people in the team. Makes sure that the priority tasks are always completed on time.'],
+  bio: 'Buffalo pancetta capicola turkey, chuck venison frankfurter hamburger salami bresaola prosciutto. Ham hock rump ball tip shank leberkas shoulder strip steak tail beef burgdoggen sausage tenderloin. Bacon kevin tail, pork belly beef sausage burgdoggen chicken pancetta ribeye shank tenderloin picanha. Tail pork loin jowl pancetta salami ball tip spare ribs.',
+  availability: true,
+  peopleILiked: [1, 2],
+  matches: [1]
+}
+const reducer = (state = [travelers,currentUser] , action = {}) => {
   switch (action.type) {
     case 'MATCHING':
       return  [...state, action.payload]
