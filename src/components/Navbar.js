@@ -12,14 +12,15 @@ const Navbar = (props) => {
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
-      {string ?<NavLink to="/profile"> <img  src={require(`${string}`)} alt='avatar'></img></NavLink> : <img  src={require(`./images/no_avatar.jpg`)} alt='avatar'></img>}
+      {string ?<img  src={require(`${string}`)} alt='avatar'></img> : <img  src={require(`./images/no_avatar.jpg`)} alt='avatar'></img>}
         <a className="brand-logo">Travel Buddy</a>
         <ul className="right">
         <li>{signedUp ? <h4>{userName}</h4>  : <h4> Sign Up </h4>}</li>
-          <li><NavLink to="/home">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+
+          <li><NavLink to="/signout">Sign Out</NavLink></li>
         </ul>
+  {signedUp ? <NavLink to="/profile"><img  src={require(`./images/setting.jpeg`)} alt='avatar'></img></NavLink> :  <h4> Sign Up </h4> }
+
       </div>
     </nav>
   )
