@@ -10,7 +10,7 @@ import MatchingList from './components/MatchingList';
 import MatchPerson from './components/MatchPerson';
 import LogIn from './components/LogIn'
 import Register from './components/Register'
-
+import Profile from './components/Profile'
 
 class App extends Component {
   render() {
@@ -28,6 +28,7 @@ class App extends Component {
           <Route path='/findmatch' component={FindMatch} />
           <Route path='/matchinglist' component={MatchingList}/>
           <Route exact path="/matches/:id" component={MatchPerson} />
+          <Route exact path='/profile' component={Profile} />
 
         </div>
       </BrowserRouter>

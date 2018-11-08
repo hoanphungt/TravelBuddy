@@ -55,7 +55,7 @@ const travelers = [
   },
   {
     id: 4,
-    photo: './images19.PNG',
+    photo: './images/19.PNG',
     firstName: 'Emily-Jane',
     lastName: 'Bass',
     age : 37,
@@ -73,7 +73,7 @@ const travelers = [
   }, 
   { 
     id: 5,
-    photo: './images20.PNG',
+    photo: './images/20.PNG',
     firstName: 'Magdalena',
     lastName: 'Desrameaux',
     age : 25,
@@ -91,7 +91,7 @@ const travelers = [
   },
   { 
     id: 6,
-    photo: './images21.PNG',
+    photo: './images/21.PNG',
     firstName: 'Martina',
     lastName: 'Dupond',
     age : 19,
@@ -109,7 +109,7 @@ const travelers = [
   },
   { 
     id: 7,
-    photo: './images22.PNG',
+    photo: './images/22.PNG',
     firstName: 'Jeanne',
     lastName: 'D\'Arc',
     age : 45,
@@ -135,6 +135,7 @@ const travelers = [
     preferences: ['Museums', 'Nightlife'],
     languages: ['english', 'french'],
     stars: 4,
+
     feedback: ['Haleema habitually plans and sequences own work and that of others. Ensures that objectives are clearly established, and that work is systematically carried out in order to achieve the objectives. Communicates plans clearly to others. A natural leader. People tend to listen and follow her example and guidance. Haleema is chosen as leader without making an issue of leadership.',
               'Always eager to take on a new task, whether hard or simple, and tackles it diligently, without question or complaint. This positive attitude inspires others too.',
               'Prioritizes and sequences own tasks and those of other people in the team. Makes sure that the priority tasks are always completed on time.'],
