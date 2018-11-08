@@ -37,6 +37,10 @@ const reducer = (state = [travelers,{}] , action = {}) => {
     state = [...state]
     state[1] = action.payload
     return state
+    case 'SIGN_OUT':
+    state = [...state]
+    state[1] = action.payload
+    return state
     //return [...state, action.payload]    
     case 'NEW_USER':
       state[0].push(action.payload)

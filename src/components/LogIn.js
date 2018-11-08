@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
-import store from '../store'
 import { connect } from 'react-redux'
 
 class LogIn extends Component {
@@ -12,27 +11,31 @@ state = {results : []}
 
   }
 
- selectCorrectUser =() => {
+ selectCorrectUser =(event) => {
   const result = this.props.travelers.filter( a => a.id == this.state.id)
 this.setState ({  results : result})  
-
-if (result.length<1) { alert('invalid username') }
-this.signingIn(this.state.id)
+if (result[0]===undefined) {
+  alert('invalid username')
+  event.preventDefault()
+}
+else {this.signingIn(result[0])}
 }
 
-signingIn = (theID) => {
+/*signingIn = (theID) => {
   store.dispatch({
     type: 'SIGN_IN',
     payload: this.props.travelers[theID-1]
   })
+}*/
+
+signingIn = (theID) => {
+  this.props.dispatch({
+    type: 'SIGN_IN',
+    payload: theID
+  })
 }
   
-  /*handleClick =(event) => {
-    if (this.state.results < 1) { 
-      event.preventDefault()}
-      console.log(this.state.results)
-
-  }*/
+  
   render () {
     return (
       <div>
@@ -45,20 +48,15 @@ signingIn = (theID) => {
         Password  :
         <input type="text" name="name" onChange={this.password} />
       </label>
-
       </form>
-
-      <NavLink to='/newTravel' className="white-text" >{/*onClick={this.handleClick}*/}
-
-      <button className="waves-effect waves-light btn-large"  onClick={this.selectCorrectUser}  >Sign In!</button>
+      <NavLink to='/newTravel' className="white-text" onClick={this.selectCorrectUser} >
+      <button className="waves-effect waves-light btn-large"  
+       >Sign In!</button>
       </NavLink>
  
-      {console.log(this.state.results)}
-      {console.log(this.state.id)}
 
 
       <div>
-
        <NavLink to='/register' className="white-text" >
       <button className="waves-effect waves-light btn-large"  >No account ? Register</button>
       </NavLink>
