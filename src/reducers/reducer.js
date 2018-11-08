@@ -1,4 +1,5 @@
 import travelers from '../data/travelers'
+<<<<<<< HEAD
 const currentUser = {
   id: 1,
   photo: './images/16.PNG',
@@ -16,11 +17,19 @@ const currentUser = {
   peopleILiked: [2, 3],
   matches: [2]
 }
+=======
+>>>>>>> be47fbbc4e1f6e92dde65db92a1d874012db87b9
 
-const reducer = (state = [travelers,currentUser] , action = {}) => {
+
+const reducer = (state = [travelers] , action = {}) => {
   switch (action.type) {
     case 'MATCHING':
       return  [...state, action.payload]
+    case 'SIGN_IN':
+    return  [...state, action.payload]
+    case 'NEW_USER':
+    state[0].push(action.payload)
+    return  [...state]
     default:
       return state
   }
