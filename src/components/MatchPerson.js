@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class MatchPerson extends Component {
 
@@ -7,26 +8,21 @@ class MatchPerson extends Component {
     const id = this.props.match.params.id
 
     const srcString = this.props.travelers.filter(traveler => traveler.id == id)[0].photo
-    console.log(srcString)
+
     return (
       <>
-      {this.sourcePhoto}
-        <div>
+        {this.sourcePhoto}
+        <h2>
           <strong>{this.props.travelers.filter(traveler => traveler.id == id)[0].firstName} {this.props.travelers.filter(traveler => traveler.id == id)[0].lastName}</strong>
-
-        </div>
+          {srcString ? <img src={require(`${srcString}`)} alt='avatar' /> : <h1>No Avatar</h1>}
+        </h2>
         <div>
           <strong>Preferences:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].preferences}
-
         </div>
         <div>
           <strong>Feedback:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].feedback}
-
-          {srcString ?           <img src={require(`${srcString}`)}alt ='avatar'/>
-: <h1>No Avatar</h1>}
-
-
-        </div>         
+        </div>
+        <Link to='/matchinglist'>Go back to my matches!</Link>
       </>
     )
   }
