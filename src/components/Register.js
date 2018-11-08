@@ -13,7 +13,22 @@ class Register extends Component {
   newUser = (theID) => {
     store.dispatch({
       type: 'NEW_USER',
-      payload: {id:theID}
+      payload: {id:theID,  
+        photo: '',
+      firstName: '',
+      lastName: '',
+      age : 0,
+      location: '',
+      preferences: [],
+      languages: [],
+      stars: 0,
+  
+      feedback: ['No feedack'],
+      bio: 'It is a long way to go',
+      availability: true,
+      peopleILiked: [2],
+      matches: []
+    }
     })
   }
 
