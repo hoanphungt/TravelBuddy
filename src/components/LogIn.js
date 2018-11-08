@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom'
 import store from '../store'
 import { connect } from 'react-redux'
 
-class LogIn extends Component {
+class LogIn extends Component {
+
 state = {results : []}
 
   fieldUserId = (userId) => {
@@ -19,11 +20,11 @@ if (result.length<1) { alert('invalid username') }
 this.signingIn(this.state.id)
 }
 
-
 signingIn = (theID) => {
   store.dispatch({
     type: 'MATCHING',
-    payload:  this.props.travelers[theID-1]
+    payload: this.props.travelers[theID-1]
+
   })
 }
   
@@ -48,7 +49,8 @@ signingIn = (theID) => {
 
       </form>
 
-      <NavLink to='/home' className="white-text" >{/*onClick={this.handleClick}*/}
+      <NavLink to='/newTravel' className="white-text" >{/*onClick={this.handleClick}*/}
+
       <button className="waves-effect waves-light btn-large"  onClick={this.selectCorrectUser}  >Sign In!</button>
       </NavLink>
  
@@ -79,18 +81,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(LogIn);
-/*
-      <div>
-          {result.length < 1 ? (
-            <div className="center-align">
-              <NavLink to='/' className="white-text">
-                <button className="waves-effect waves-light btn-large">This user doesn't exist. Back to Sign in</button>
-              </NavLink>
-            </div>
-            ) : (
-              <NavLink to='/home' className="white-text">
-              <button className="waves-effect waves-light btn-large" >You are logged in ! Go to home page</button>
-              </NavLink>
-          )}
-        </div>
-        */
+

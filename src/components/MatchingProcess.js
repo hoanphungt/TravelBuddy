@@ -1,52 +1,60 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import MatchProfile from './MatchProfile'
+import store from '../store'
 import { NavLink } from 'react-router-dom'
 
 class MatchingProcess extends Component {
   state = {
-    m: [...this.props.travelers]
-  }
-  
-  renderPossibleMatch(match) {
-    return (
-      <MatchProfile
-      key = {match.id}
-      firstName = {match.firstName}
-      lastName = {match.lastName}
-      preferences = {match.preferences}
-      languages = {match.languages}
-      photo = {match.photo}
-      />
-    )
+    database: this.props.travelers[0],
+    currentUser: this.props.travelers[1],
+    matches: this.props.travelers[2]
   }
 
+  deleteMatch = (id) => {
+    let matches = this.state.matches.filter(match => {
+      return match.id !== id
+    });
+    this.setState({
+      matches: matches
+    });
+  }
+
+  addMatch = (id, database) => {
+    // This is the id of the match and not the current User
+    // console.log(id)
+    // console.log(this.state.currentUser.peopleILiked)
+    store.dispatch({
+      type: 'ADD_POSSIBLE_MATCH',
+      payload: {
+        id,
+        database
+      }
+    })
+    this.deleteMatch(id)
+  }
+
+  clearMatches = () => {
+    store.dispatch({
+      type: 'CLEAR_ALL_MATCHES',
+      payload: null
+    })
+  }
+  
   render() {
-    // const index = Math.floor(Math.random() * this.state.m.length)
-    const index = this.state.m.length - 1
     return (
-      <div>
-        <div>
-          {this.state.m.length < 1 ? <p className="center">You have no matches. Sorry...</p> : (
-            this.renderPossibleMatch(this.state.m[index])
-          )}
-        </div>
-        <div>
-          {this.state.m.length < 1 ? (
-            <div className="center-align">
-              <NavLink to='/newtravel' className="white-text">
-                <button className="waves-effect waves-light btn-large">Try again!</button>
+      <div className="container">
+        <MatchProfile travelers={this.state.matches} database ={this.state.database} 
+        deleteMatch={this.deleteMatch} addMatch={this.addMatch} clearMatches={this.clearMatches}/>
+        <div className="center-align">
+          <p>
+            <NavLink to='/matchinglist' className="white-text">
+                <button className="waves-effect waves-light btn-large">See your matches</button>
               </NavLink>
-            </div>
-            ) : (
-            <div className="center-align">
-              <button onClick={this.handleDislike} className="waves-effect waves-light btn-large">Dislike</button>
-              <button onClick={this.handleLike} className="waves-effect waves-light btn-large">Like</button>
-            </div>
-          )}
+          </p>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -57,3 +65,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(MatchingProcess);
+
+

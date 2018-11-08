@@ -33,7 +33,7 @@ const travelers = [
     bio: 'Short loin shankle cupim shoulder alcatra kevin boudin tongue pork chop beef kielbasa porchetta jerky ground round. Chuck bacon meatball pork loin kevin sausage jowl. Cupim ribeye pork loin sirloin short ribs, tongue buffalo alcatra pastrami venison bacon shank. Shoulder short loin rump, ground round ball tip turducken jerky. Picanha filet mignon hamburger jerky kielbasa, sausage turkey. Brisket ribeye pork belly, pancetta meatball tail short ribs capicola meatloaf ham frankfurter short loin spare ribs chuck. Jowl chuck boudin venison brisket pig buffalo.',
     availability: true,
     peopleILiked: [1, 3],
-    matches: [1]
+    matches: []
   },
   {
     id: 3,

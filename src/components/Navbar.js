@@ -3,6 +3,7 @@ import { NavLink, withRouter } from 'react-router-dom'
 import store from '../store'
 
 const Navbar = (props) => {
+
   // setTimeout(() => {
   //   props.history.push('/about')
   // }, 2000)      

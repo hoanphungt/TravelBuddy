@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class MatchPerson extends Component {
+
   render() {
     const id = this.props.match.params.id
 
@@ -20,6 +21,7 @@ class MatchPerson extends Component {
         </div>
         <div>
           <strong>Feedback:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].feedback}
+
           {srcString ?           <img src={require(`${srcString}`)}alt ='avatar'/>
 : <h1>No Avatar</h1>}
 

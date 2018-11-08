@@ -1,35 +1,44 @@
 import travelers from '../data/travelers'
-<<<<<<< HEAD
-const currentUser = {
-  id: 1,
-  photo: './images/16.PNG',
-  firstName: 'Haleema',
-  lastName: 'Greenwood',
-  location: 'London',
-  preferences: ['Museums', 'Nightlife'],
-  languages: ['english', 'french'],
-  stars: 4,
-  feedback: ['Haleema habitually plans and sequences own work and that of others. Ensures that objectives are clearly established, and that work is systematically carried out in order to achieve the objectives. Communicates plans clearly to others. A natural leader. People tend to listen and follow her example and guidance. Haleema is chosen as leader without making an issue of leadership.',
-            'Always eager to take on a new task, whether hard or simple, and tackles it diligently, without question or complaint. This positive attitude inspires others too.',
-            'Prioritizes and sequences own tasks and those of other people in the team. Makes sure that the priority tasks are always completed on time.'],
-  bio: 'Bacon ipsum dolor amet boudin tenderloin meatloaf, tri-tip ham shank short ribs kielbasa biltong ground round chicken pork loin chuck pork. Pastrami buffalo jowl, spare ribs beef ribs ham chuck cupim turducken doner swine kevin alcatra tri-tip picanha. Leberkas sausage pork alcatra porchetta ham, pig short loin. Pastrami salami frankfurter andouille cow jerky. Rump pork burgdoggen tail chicken. Pig picanha jowl, pastrami chicken fatback jerky andouille sausage turkey drumstick shank cupim biltong. Shankle pork belly pastrami turducken doner.',
-  availability: true,
-  peopleILiked: [2, 3],
-  matches: [2]
-}
-=======
->>>>>>> be47fbbc4e1f6e92dde65db92a1d874012db87b9
 
 
 const reducer = (state = [travelers] , action = {}) => {
   switch (action.type) {
     case 'MATCHING':
       return  [...state, action.payload]
+    // ADD a match to the table of possible matches
+    case 'ADD_POSSIBLE_MATCH':
+      state = [...state]
+      // Filter out only the preson I just clicked
+      const database = [...action.payload.database]
+      const clickedUser = database.filter(user => user.id === action.payload.id)[0]
+      const currentUser = state[1]
+      // First check if the person is already in my peopleILiked array
+      if (!currentUser.peopleILiked.includes(clickedUser.id)) {currentUser.peopleILiked.push(clickedUser.id)}
+
+      // Check to see if the currectUser's id is inside the peopleILiked array
+      // of the clickedUser. If so, each id should be added to the other's user
+      // matches array
+      if (clickedUser.peopleILiked.includes(currentUser.id)) {
+        if (!clickedUser.matches.includes(currentUser.id)) {
+          clickedUser.matches.push(currentUser.id)
+        }
+        if (!currentUser.matches.includes(clickedUser.id)) {
+          currentUser.matches.push(clickedUser.id)
+        }
+      }
+
+      console.log(state[1].peopleILiked)
+      return state
+    case 'CLEAR_ALL_MATCHES':
+      state = [...state]
+      state[2] = []
+      return state
     case 'SIGN_IN':
-    return  [...state, action.payload]
+      return  [...state, action.payload]
     case 'NEW_USER':
-    state[0].push(action.payload)
-    return  [...state]
+      state[0].push(action.payload)
+      return [...state]
+
     default:
       return state
   }
