@@ -5,7 +5,7 @@ class FindMatch extends Component {
   render() {
     return (
       <div>
-        <h4 className="center">Hello!!!</h4>
+        <h4 className="center">Check your possible matches!</h4>
         <MatchingProcess />
       </div>
     )
