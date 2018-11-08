@@ -4,13 +4,9 @@ import store from '../store'
 
 const Navbar = (props) => {
 
-  // setTimeout(() => {
-  //   props.history.push('/about')
-  // }, 2000)      
-
-const string = store.getState()[1].photo
-const signedUp = store.getState()[1]
-const userName = store.getState()[1].firstname
+  const string = store.getState()[1].photo
+  const signedUp = store.getState()[1]
+  const  userName = store.getState()[1].firstname
 
   return (
     <nav className="nav-wrapper red darken-3">

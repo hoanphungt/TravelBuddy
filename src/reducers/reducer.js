@@ -1,10 +1,12 @@
 import travelers from '../data/travelers'
 
 
-const reducer = (state = [travelers] , action = {}) => {
+const reducer = (state = [travelers,{}] , action = {}) => {
   switch (action.type) {
     case 'MATCHING':
-      return  [...state, action.payload]
+      state = [...state]
+      state[2] = action.payload
+      return state
     // ADD a match to the table of possible matches
     case 'ADD_POSSIBLE_MATCH':
       state = [...state]
@@ -26,15 +28,16 @@ const reducer = (state = [travelers] , action = {}) => {
           currentUser.matches.push(clickedUser.id)
         }
       }
-
-      console.log(state[1].peopleILiked)
       return state
     case 'CLEAR_ALL_MATCHES':
       state = [...state]
       state[2] = []
       return state
     case 'SIGN_IN':
-      return  [...state, action.payload]
+    state = [...state]
+    state[1] = action.payload
+    return state
+    //return [...state, action.payload]    
     case 'NEW_USER':
       state[0].push(action.payload)
       return [...state]
