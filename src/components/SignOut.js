@@ -26,7 +26,7 @@ signinOut = () => {
  
 
 
-       <NavLink to='/home' className="white-text" >
+       <NavLink to='/newTravel' className="white-text" >
       <button className="waves-effect waves-light btn-large"  >NO </button>
       </NavLink>
 
