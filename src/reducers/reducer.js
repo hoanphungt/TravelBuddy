@@ -21,7 +21,9 @@ const currentUser =  {
 const reducer = (state = [travelers,currentUser] , action = {}) => {
   switch (action.type) {
     case 'MATCHING':
-      return  [...state, action.payload]
+      state = [...state]
+      state[2] = action.payload
+      return state
     // ADD a match to the table of possible matches
     case 'ADD_POSSIBLE_MATCH':
       state = [...state]
