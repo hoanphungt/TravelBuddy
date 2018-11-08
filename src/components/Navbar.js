@@ -5,14 +5,19 @@ import store from '../store'
 const Navbar = (props) => {
   // setTimeout(() => {
   //   props.history.push('/about')
-  // }, 2000)
+  // }, 2000)      
+
 const string = store.getState()[1].photo
+const signedUp = store.getState()[1]
+const userName = store.getState()[1].firstname
+
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
-      <img  src={require(`${string}`)} alt='avatar'/>
+      {string ? <img  src={require(`${string}`)} alt='avatar'/> : <img  src={require(`./images/happy2.svg`)} alt='avatar'/>}
         <a className="brand-logo">Travel Buddy</a>
         <ul className="right">
+        <li>{signedUp ? <h1>userName</h1>  : <h1> Sign Up </h1>}</li>
           <li><NavLink to="/home">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
