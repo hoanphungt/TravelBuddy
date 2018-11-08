@@ -45,7 +45,7 @@ class Register extends Component {
 
       </form>
 
-      <NavLink to='/home' className="white-text" >
+      <NavLink to='/' className="white-text" >
       <button className="waves-effect waves-light btn-large"  onClick={this.clicking} >Sign Up</button>
       </NavLink>
       </>
