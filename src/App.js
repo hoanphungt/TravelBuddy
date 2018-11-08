@@ -11,12 +11,16 @@ import MatchPerson from './components/MatchPerson';
 import LogIn from './components/LogIn'
 import Register from './components/Register'
 
+
 class App extends Component {
   render() {
     return (
+
       <BrowserRouter>
         <div className="App">
           <Navbar />
+          <Route exact path='/' component={LogIn} />
+          <Route exact path='/register' component={Register} />
           <Route exact path='/home' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
@@ -24,8 +28,7 @@ class App extends Component {
           <Route path='/findmatch' component={FindMatch} />
           <Route path='/matchinglist' component={MatchingList}/>
           <Route exact path="/matches/:id" component={MatchPerson} />
-          <Route exact path='/' component={LogIn} />
-          <Route exact path='/register' component={Register} />         
+
         </div>
       </BrowserRouter>
     );

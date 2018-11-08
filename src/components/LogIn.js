@@ -4,6 +4,7 @@ import store from '../store'
 import { connect } from 'react-redux'
 
 class LogIn extends Component {
+
 state = {results : []}
 
   fieldUserId = (userId) => {
@@ -23,6 +24,7 @@ signingIn = (theID) => {
   store.dispatch({
     type: 'MATCHING',
     payload: this.props.travelers[theID-1]
+
   })
 }
   
@@ -30,6 +32,7 @@ signingIn = (theID) => {
     if (this.state.results < 1) { 
       event.preventDefault()}
       console.log(this.state.results)
+
   }*/
   render () {
     return (
@@ -47,6 +50,7 @@ signingIn = (theID) => {
       </form>
 
       <NavLink to='/newTravel' className="white-text" >{/*onClick={this.handleClick}*/}
+
       <button className="waves-effect waves-light btn-large"  onClick={this.selectCorrectUser}  >Sign In!</button>
       </NavLink>
  
@@ -77,3 +81,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(LogIn);
+
