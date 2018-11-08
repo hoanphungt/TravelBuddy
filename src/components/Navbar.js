@@ -17,7 +17,7 @@ const userName = store.getState()[1].firstname
       {string ? <img  src={require(`${string}`)} alt='avatar'/> : <img  src={require(`./images/happy2.svg`)} alt='avatar'/>}
         <a className="brand-logo">Travel Buddy</a>
         <ul className="right">
-        <li>{signedUp ? <h1>userName</h1>  : <h1> Sign Up </h1>}</li>
+        <li>{signedUp ? <h4>test</h4>  : <h4> Sign Up </h4>}</li>
           <li><NavLink to="/home">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
