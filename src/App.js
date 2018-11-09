@@ -12,6 +12,7 @@ import LogIn from './components/LogIn'
 import Register from './components/Register'
 import Profile from './components/Profile'
 import SignOut from './components/SignOut'
+import NewUserInfo from './components/NewUserInfo'
 import './App.css'
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
 
       <BrowserRouter>
         <div className="App">
+
           <div className="container">
             <div className="container" id="mainapp">
             <Navbar />
@@ -34,6 +36,8 @@ class App extends Component {
             <Route exact path="/matches/:id" component={MatchPerson} />
             <Route exact path='/profile' component={Profile} />
             <Route exact path='/signout' component={SignOut} />
+                <Route exact path='/newuserinfo' component={NewUserInfo} />
+
             </div>
           </div>
         </div>

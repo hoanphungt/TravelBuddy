@@ -60,7 +60,7 @@ class Register extends Component {
 
       </form>
 
-      <NavLink to='/' className="white-text" >
+      <NavLink to='/newuserinfo' className="white-text" >
       <button className="waves-effect waves-light btn-large"  onClick={this.clicking} >Sign Up</button>
       </NavLink>
       </>
