@@ -146,7 +146,7 @@ const travelers = [
   },
   { 
     id: 9,
-    photo: './images/23.PNG',
+    photo: './images/23.png',
     firstName: 'Mirelle',
     lastName: 'Matthieu',
     age : 21,
@@ -164,7 +164,7 @@ const travelers = [
   },
   { 
     id: 10,
-    photo: './images/1.PNG',
+    photo: './images/1.png',
     firstName: 'Johny',
     lastName: 'Halliday',
     age : 27,
