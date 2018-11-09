@@ -36,7 +36,7 @@ class App extends Component {
             <Route exact path="/matches/:id" component={MatchPerson} />
             <Route exact path='/profile' component={Profile} />
             <Route exact path='/signout' component={SignOut} />
-                <Route exact path='/newuserinfo' component={NewUserInfo} />
+            <Route exact path='/newuserinfo' component={NewUserInfo} />
 
             </div>
           </div>

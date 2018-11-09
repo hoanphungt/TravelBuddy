@@ -11,7 +11,7 @@ state = {results : []}
 
   }
 
- selectCorrectUser =(event) => {
+selectCorrectUser =(event) => {
   const result = this.props.travelers.filter( a => a.id == this.state.id)
 this.setState ({  results : result})  
 if (result[0]===undefined) {
@@ -40,36 +40,37 @@ signingIn = (theID) => {
     return (
     <div className="container">
       <div className="container">
-      <form className="loginform">
-      <label>
-        UserID or Email :
-        <input id="userID" type="text" name="name" className="inputfield" onChange={this.fieldUserId}  />
-      </label>
-      <label>
-        Password  :
-        <input id="password" type="password" name="name" className="inputfield" onChange={this.password} />
-      </label>
-      </form>
+        <form className="loginform">
+        <label className="labelform">
+          UserID or Email :
+          <input id="userID" type="text" name="name" className="inputfield" onChange={this.fieldUserId}  />
+        </label>
+        <label className="labelform">
+          Password  :
+          <input id="password" type="password" name="name" className="inputfield" onChange={this.password} />
+        </label>
+        </form>
       </div>
 
       <br></br>
       <br></br>
 
       <div className="row">
-        <div className="col s4">
+        <div className="col s2">
         </div>
-        <div className="col s4">
+        <div className="col s8 offset-s1">
           <NavLink to='/newTravel' className="white-text" onClick={this.selectCorrectUser} >
             <button className="waves-effect waves-light btn-large orange darken-1">
               <b>Sign In</b>
             </button>
           </NavLink>
         </div>
-        <div className="col s4">
+        <div className="col s1">
         </div>
       </div>
 
     </div>
+
 
       /* <div className="centerButtonLogIn">
       </div>
@@ -79,8 +80,8 @@ signingIn = (theID) => {
             <button className="waves-effect waves-light btn-large orange darken-1">Sign up</button>
           </NavLink>
       </div> */
+
     )
-   
   }
 }
 
