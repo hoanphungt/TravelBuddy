@@ -10,8 +10,8 @@ class MatchPerson extends Component {
     const srcString = this.props.travelers.filter(traveler => traveler.id == id)[0].photo
 
     return (
-      <div>        
-        <div class='container' >
+      <div >        
+        <div  class='container' >
           <strong style={{fontSize: '30px'}}>{this.props.travelers.filter(traveler => traveler.id == id)[0].firstName} {this.props.travelers.filter(traveler => traveler.id == id)[0].lastName}</strong>
           {srcString ? <img className="rectangular" height="200px" src={require(`${srcString}`)} alt='avatar' /> : <img className="rectangular" height="200px" src={require(`./images/no_avatar.jpg`)} />}
         </div>
