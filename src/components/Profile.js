@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 //import store from '../store'
 import { connect } from 'react-redux'
 
@@ -24,32 +24,29 @@ class Profile extends Component {
   render (){
       return (
         <div className="container">
-          <form className="center">
-            <div className="row">
-              <div className="input-field col s6 offset-s3">
-              <button className="waves-effect waves-light btn-large" > PROFILE</button>
-              </div>
+          <div className="registerForm">
+          <div className="row">
+            <div className="input-field col s7 offset-s3">
+              <NavLink to='/newuserinfo' className="white-text">
+              <button className="waves-effect waves-light btn-large orange darken-1">PROFILE</button>
+              </NavLink>
             </div>
-            <div className="row">
-              <div className="input-field col s6 offset-s3">
-              <button className="waves-effect waves-light btn-large" > PREFERENCES</button>
-              </div>
-            </div>           
-            <div className="row">
-              <div className="input-field col s6 offset-s3">
-              <button className="waves-effect waves-light btn-large" > NOTIFICATIONS</button>
-
-              </div>
-            </div>
-          </form>
-          <div className='container'>
           </div>
-        </div>    )
+          <div className="row">
+            <div className="input-field col s6 offset-s2">
+              <button className="waves-effect waves-light btn-large orange darken-1">PREFERENCES</button>
+            </div>
+          </div>           
+        <div className="row">
+          <div className="input-field col s6 offset-s2">
+            <button className="waves-effect waves-light btn-large orange darken-1">NOTIFICATIONS</button>
+          </div>
+        </div>
+        </div>
+      </div>    
+    )
   }
 }
-
-
-
 
 const mapStateToProps = (state) => {
   return {

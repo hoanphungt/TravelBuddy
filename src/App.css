@@ -10,6 +10,10 @@
   margin-bottom: 50px;
 } 
 
+h4 {
+  color: #E59A03;
+}
+
 #Logo {
   font-size: x-large;
 }
@@ -42,6 +46,12 @@
 
 .registerForm {
   width: 80%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signout {
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;

@@ -50,7 +50,7 @@ const Navbar = (props) => {
           <div className="col s5">
             <span id='Logo'><b>Travel Buddy</b></span>
           </div>
-          <div className="col s1">
+          <div className="col s1 offset-s2">
           <a>{id ? (
             <NavLink to="/signout"><i class="material-icons">person_outline</i></NavLink>
           ) : (
