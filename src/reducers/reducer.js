@@ -44,7 +44,16 @@ const reducer = (state = [travelers,{}] , action = {}) => {
     //return [...state, action.payload]    
     case 'NEW_USER':
       state[0].push(action.payload)
+      state[1] = action.payload
       return [...state]
+      // TO BE IMPLEMENTED
+      case 'NEW_USER_INFO': 
+      state = [...state]     
+      state[0][action.payload.id-1] = action.payload
+      console.log(action.payload)
+      console.log('one travaler'+state[0[action.payload.id-1]])
+      state[1] =  action.payload
+      return state
 
     default:
       return state
