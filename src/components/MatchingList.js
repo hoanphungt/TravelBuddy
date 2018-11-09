@@ -18,10 +18,10 @@ class MatchingList extends Component {
                                         <Link to={`/matches/${match.id}`} id={match.id}><strong>{match.firstName} {match.lastName}</strong></Link>
                                     </div>
                                     <div class='row'>
-                                        <div class='column' style={{ float: 'left', width: '50%', height: '70px' }}>
-                                            <p>{match.photo ? <img className="circle" height="60px" width="80px" src={require(`${match.photo}`)} alt='avatar' /> : <img className="circle" height="60px" width="80px" src={require(`./images/no_avatar.jpg`)} />}</p>
+                                        <div class='column' style={{ float: 'left', width: '50%', height: '80px' }}>
+                                            <p>{match.photo ? <img className="circle" height="80px" width="60px" src={require(`${match.photo}`)} alt='avatar' /> : <img className="circle" height="80px" width="60px" src={require(`./images/no_avatar.jpg`)} />}</p>
                                         </div>
-                                        <div class='column' style={{ float: 'right', width: '50%', height: '70px' }}>
+                                        <div class='column' style={{ float: 'right', width: '50%', height: '80px' }}>
                                             <p>{match.age}</p>
                                             <p>{match.preferences.join(', ')}</p>
                                         </div>
