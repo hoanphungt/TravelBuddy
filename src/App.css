@@ -10,6 +10,28 @@
   margin-bottom: 50px;
 } 
 
+#Logo {
+  font-size: x-large;
+}
+
+.row .col.s4 {
+  text-align: center;
+}
+
+.row .col.s3 {
+  text-align: right;
+}
+
+#userID {
+  color: #E59A03;
+  font-size: x-large;
+}
+
+#password {
+  color: #E59A03;
+  font-size: x-large;
+}
+
 .loginform {
   margin-top: 200px;
 }

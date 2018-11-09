@@ -38,35 +38,47 @@ signingIn = (theID) => {
   
   render () {
     return (
-      <div className="container">
+    <div className="container">
       <div className="container">
       <form className="loginform">
       <label>
         UserID or Email :
-        <input type="text" name="name" className="inputfield" onChange={this.fieldUserId}  />
+        <input id="userID" type="text" name="name" className="inputfield" onChange={this.fieldUserId}  />
       </label>
       <label>
         Password  :
-        <input type="text" name="name" className="inputfield" onChange={this.password} />
+        <input id="password" type="password" name="name" className="inputfield" onChange={this.password} />
       </label>
       </form>
       </div>
-      <NavLink to='/newTravel' className="white-text" onClick={this.selectCorrectUser} >
-      <button className="waves-effect waves-light btn-large"  
-       >Sign In!</button>
-      </NavLink>
- 
 
+      <br></br>
+      <br></br>
 
-      <div>
-       <NavLink to='/register' className="white-text" >
-      <button className="waves-effect waves-light btn-large"  >No account ? Register</button>
-      </NavLink>
+      <div className="row">
+        <div className="col s4">
+        </div>
+        <div className="col s4">
+          <NavLink to='/newTravel' className="white-text" onClick={this.selectCorrectUser} >
+            <button className="waves-effect waves-light btn-large orange darken-1">
+              <b>Sign In</b>
+            </button>
+          </NavLink>
+        </div>
+        <div className="col s4">
+        </div>
       </div>
 
     </div>
 
+      {/* <div className="centerButtonLogIn">
+      </div>
 
+      <div className="row">
+          <NavLink to='/register' className="white-text" >
+            <button className="waves-effect waves-light btn-large orange darken-1">Sign up</button>
+          </NavLink>
+      </div> */}
     )
    
   }

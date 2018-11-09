@@ -23,7 +23,12 @@ export default class MatchProfile extends Component {
         ) : (
           <div class="card">
             <div class="card-image">
-              <img src={require(`./images/no_avatar.jpg`)} alt="profile img"/>
+              {/* <img src={require(`./images/no_avatar.jpg`)} alt="profile img"/> */}
+
+              {match.photo ? <img className="circle" src={require(`${match.photo}`)} alt='avatar'>
+                </img> : <img className="circle" src={require(`./images/no_avatar.jpg`)} alt='avatar'></img>}
+
+
               <span class="card-title"><b>{match.firstName}, {match.age}</b></span>
               <div class="card-content">
                 <p>{match.preferences.join(', ')}</p>
