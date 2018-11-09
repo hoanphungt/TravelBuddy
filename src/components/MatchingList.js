@@ -9,7 +9,7 @@ class MatchingList extends Component {
 
         return (
             <div>
-                <div class="container" style={{ overflowY: 'scroll', height: '550px' }}>
+                <div class="container" style={{ overflowY: 'scroll', height: '550px', marginLeft: '0' }}>
                     <ul>
                         <li>
                             {array.map(match => (
