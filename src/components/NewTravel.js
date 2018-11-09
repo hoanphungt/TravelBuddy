@@ -29,28 +29,30 @@ export default class NewTravel extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="newtraveler">
         <form className="center">
-          <h4>I'm going to</h4>
+          <div className="newtravelerinputs">
+          <h5><b>I'm going to</b></h5>
           <div className="row">
-            <div className="input-field col s6 offset-s3">
+            <div className="input-field col s8 offset-s2">
               <input id="destination" placeholder="Try Berlin..." type="text" onChange={this.defineLocation}/>
               <label for="destination"></label>
             </div>
           </div>
-          <h4>On the following period</h4>
+          <h5><b>On the following period</b></h5>
           <div className="row">
-            <div className="input-field col s2 offset-s3">
-              <input id="startDate" type="text" onChange={this.defineArrivalDate}/>
+            <div className="input-field col s3 offset-s2">
+              <input type="text" id="startDate" placeholder="Date" onChange={this.defineArrivalDate}/>
               <label for="startDate"></label>
             </div>
-            <div className='col s2'>
-              <h4 className="center">to</h4>
+            <div className='col s1'>
+              <h5 className="centerh5"><b>to</b></h5>
             </div>
-            <div className="input-field col s2">
-              <input id="lastDate" type="text" onChange={this.defineDepartureDate}/>
+            <div className="input-field col s3 offset-s1">
+              <input type="text" id="lastDate" placeholder="Date" onChange={this.defineDepartureDate}/>
               <label for="lastDate"></label>
             </div>
+          </div>
           </div>
         </form>
         <div className='container'>

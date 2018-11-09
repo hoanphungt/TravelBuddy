@@ -15,9 +15,10 @@ export default class Match extends Component {
   
   render() {
     return (
-      <div className="center-align">
+      <div className="container" >
         <NavLink to='/findmatch' className="white-text">
-          <button className="waves-effect waves-light btn-large" onClick={() => this.matching()}>Find my Matches!</button>
+          <img className="findButton" src={require(`../data/imagesUI/findButton.svg`)}
+            onClick={() => this.matching()} alt="Find Matches"/>
         </NavLink>
       </div>
     )

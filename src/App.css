@@ -1,0 +1,73 @@
+#mainapp {
+  background-color:#2A7099;
+  background-image: url("./data/imagesUI/bgwhite.svg");
+  height: 730px;
+  width: 410px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  margin-bottom: 50px;
+} 
+
+.loginform {
+  margin-top: 200px;
+}
+
+.inputfield {
+  color: #E59A03;
+  font-size: xx-large;
+}
+
+.nav-wrapper {
+  position: inherit; 
+}
+
+.findButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+}
+
+.newtravelerinputs {
+  color: #2A7099;
+  margin-top: 220px;
+}
+
+#destination {
+  color: #E59A03;
+  font-size: xx-large;
+}
+
+#startDate {
+  color: #E59A03;
+}
+
+#lastDate {
+  color: #E59A03;
+}
+
+.centerh5 {
+  padding-left: 10px;
+  margin-top: 24px;
+}
+
+.card-image-center {
+  display:flex;
+  justify-content:center
+}
+
+.card {
+  margin-top: 50px;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card .card-image .card-title {
+  left: -50px;
+  padding: 80px;
+  -webkit-text-stroke-width: medium;
+}

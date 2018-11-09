@@ -49,8 +49,10 @@ class MatchingProcess extends Component {
         <div className="center-align">
           <p>
             <NavLink to='/matchinglist' className="white-text">
-                <button className="waves-effect waves-light btn-large">See your matches</button>
-              </NavLink>
+              <a class="btn-floating btn-large waves-effect waves-light orange darken-3">
+                <i class="material-icons">people</i>
+              </a>
+            </NavLink>
           </p>
         </div>
       </div>

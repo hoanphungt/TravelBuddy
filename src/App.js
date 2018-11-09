@@ -13,6 +13,7 @@ import Register from './components/Register'
 import Profile from './components/Profile'
 import SignOut from './components/SignOut'
 import NewUserInfo from './components/NewUserInfo'
+import './App.css'
 
 class App extends Component {
   render() {
@@ -20,21 +21,25 @@ class App extends Component {
 
       <BrowserRouter>
         <div className="App">
-          <Navbar />
-          <Route exact path='/' component={LogIn} />
-          <Route exact path='/register' component={Register} />
-          <Route exact path='/home' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/newtravel' component={NewTravel} />          
-          <Route path='/findmatch' component={FindMatch} />
-          <Route path='/matchinglist' component={MatchingList}/>
-          <Route exact path="/matches/:id" component={MatchPerson} />
-          <Route exact path='/profile' component={Profile} />
-          <Route exact path='/signout' component={SignOut} />
-          <Route exact path='/newuserinfo' component={NewUserInfo} />
 
+          <div className="container">
+            <div className="container" id="mainapp">
+            <Navbar />
+            <Route exact path='/' component={LogIn} />
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/home' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/newtravel' component={NewTravel} />          
+            <Route path='/findmatch' component={FindMatch} />
+            <Route path='/matchinglist' component={MatchingList}/>
+            <Route exact path="/matches/:id" component={MatchPerson} />
+            <Route exact path='/profile' component={Profile} />
+            <Route exact path='/signout' component={SignOut} />
+                <Route exact path='/newuserinfo' component={NewUserInfo} />
 
+            </div>
+          </div>
         </div>
       </BrowserRouter>
     );
