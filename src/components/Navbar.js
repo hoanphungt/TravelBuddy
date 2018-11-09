@@ -16,11 +16,10 @@ const Navbar = (props) => {
 
 
   return (
-    <nav className="nav-wrapper red darken-3">
+    <nav className="nav-wrapper teal accent-4">
       <div className="container">
-
-        {string ? <img src={require(`${string}`)} alt='avatar' height="70px" length="70px">
-        </img> : <img height="70px" length="70px" src={require(`./images/no_avatar.jpg`)}
+        {string ? <img className="circle" src={require(`${string}`)} alt='avatar' height="60px" width="60px">
+        </img> : <img className="circle" height="60px" width="60px" src={require(`./images/no_avatar.jpg`)}
           alt='avatar'></img>}
 
         <a className="brand-logo">Travel Buddy</a>
@@ -34,11 +33,10 @@ const Navbar = (props) => {
 
         </ul>
 
-        {id  ? <NavLink to="/profile"><img
+        {/* {id  ? <NavLink to="/profile"><img
           src={require(`./images/setting.jpeg`)} alt='avatar' height="70px" length="70px">
         </img></NavLink> :
-         console.log('')}
-
+         console.log('')} */}
       </div>
     </nav>
   )

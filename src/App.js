@@ -12,25 +12,30 @@ import LogIn from './components/LogIn'
 import Register from './components/Register'
 import Profile from './components/Profile'
 import SignOut from './components/SignOut'
+import './App.css'
+
 class App extends Component {
   render() {
     return (
 
       <BrowserRouter>
         <div className="App">
-          <Navbar />
-          <Route exact path='/' component={LogIn} />
-          <Route exact path='/register' component={Register} />
-          <Route exact path='/home' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/newtravel' component={NewTravel} />          
-          <Route path='/findmatch' component={FindMatch} />
-          <Route path='/matchinglist' component={MatchingList}/>
-          <Route exact path="/matches/:id" component={MatchPerson} />
-          <Route exact path='/profile' component={Profile} />
-          <Route exact path='/signout' component={SignOut} />
-
+          <div className="container">
+            <div className="container" id="mainapp">
+            <Navbar />
+            <Route exact path='/' component={LogIn} />
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/home' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/newtravel' component={NewTravel} />          
+            <Route path='/findmatch' component={FindMatch} />
+            <Route path='/matchinglist' component={MatchingList}/>
+            <Route exact path="/matches/:id" component={MatchPerson} />
+            <Route exact path='/profile' component={Profile} />
+            <Route exact path='/signout' component={SignOut} />
+            </div>
+          </div>
         </div>
       </BrowserRouter>
     );

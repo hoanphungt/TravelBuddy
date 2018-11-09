@@ -38,17 +38,19 @@ signingIn = (theID) => {
   
   render () {
     return (
-      <div>
-      <form>
+      <div className="container">
+      <div className="container">
+      <form className="loginform">
       <label>
         UserID or Email :
-        <input type="text" name="name"  onChange={this.fieldUserId}  />
+        <input type="text" name="name" className="inputfield" onChange={this.fieldUserId}  />
       </label>
       <label>
         Password  :
-        <input type="text" name="name" onChange={this.password} />
+        <input type="text" name="name" className="inputfield" onChange={this.password} />
       </label>
       </form>
+      </div>
       <NavLink to='/newTravel' className="white-text" onClick={this.selectCorrectUser} >
       <button className="waves-effect waves-light btn-large"  
        >Sign In!</button>

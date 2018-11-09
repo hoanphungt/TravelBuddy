@@ -21,16 +21,31 @@ export default class MatchProfile extends Component {
             </div>
           </div>
         ) : (
-          <div className="container">
-            <h1 className="center">{match.firstName} {match.lastName}</h1>
-            <div className="center-align">
-              <button onClick={() => {
-                this.props.deleteMatch(match.id)
-              }
-              } className="waves-effect waves-light btn-large">Dislike</button>
-              <button onClick={() => this.props.addMatch(match.id, database)} className="waves-effect waves-light btn-large">Like</button>
+          <div class="card">
+            <div class="card-image">
+              <img src={require(`./images/no_avatar.jpg`)} alt="profile img"/>
+              <span class="card-title"><b>{match.firstName}, {match.age}</b></span>
+              <div class="card-content">
+                <p>{match.preferences.join(', ')}</p>
+              </div>
+            </div>
+
+            
+            <div className="row">
+              <div className="col s2 offset-s1">
+                <a class="btn-floating btn-large waves-effect waves-light red"
+                  onClick={() => {this.props.deleteMatch(match.id)}}>
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            <div class="col s2 offset-s3">
+              <a class="btn-floating btn-large waves-effect waves-light red"
+                onClick={() => this.props.addMatch(match.id, database)}>
+                <i class="material-icons">check</i>
+              </a>
             </div>
           </div>
+        </div>
         )}
       </div>
     )

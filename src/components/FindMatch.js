@@ -4,8 +4,7 @@ import MatchingProcess from './MatchingProcess';
 class FindMatch extends Component {
   render() {
     return (
-      <div>
-        <h4 className="center">Check your possible matches!</h4>
+      <div className="container">
         <MatchingProcess />
       </div>
     )
