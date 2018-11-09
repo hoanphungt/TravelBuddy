@@ -1,6 +1,5 @@
 import travelers from '../data/travelers'
 
-
 const reducer = (state = [travelers,{}] , action = {}) => {
   switch (action.type) {
     case 'MATCHING':
@@ -48,11 +47,11 @@ const reducer = (state = [travelers,{}] , action = {}) => {
       return [...state]
       // TO BE IMPLEMENTED
       case 'NEW_USER_INFO': 
-      state = [...state]     
-      state[0][action.payload.id-1] = action.payload
-      console.log(action.payload)
-      console.log('one travaler'+state[0[action.payload.id-1]])
-      state[1] =  action.payload
+      state = [...state]
+      const indextochange = state[0].filter (a => a.id == action.payload.id)     
+      state[0][indextochange[0].id-1] = action.payload
+      state[1] =  action.payload  
+      console.log(indextochange)
       return state
 
     default:
