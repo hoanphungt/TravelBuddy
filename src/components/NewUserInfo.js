@@ -49,20 +49,20 @@ render(){
       <h4>Personal data</h4>
       <div className="row">
         <div className="input-field col s6 offset-s3">
-          <input id="destination" placeholder="first name" type="text" onChange={this.firstname}/>
-          <label for="destination"></label>
+          <input id="destination2" placeholder="first name" type="text" onChange={this.firstname}/>
+          <label for="destination2"></label>
         </div>
         <div className="input-field col s6 offset-s3">
-          <input id="destination" placeholder="last name" type="text" onChange={this.lastname}/>
-          <label for="destination"></label>
+          <input id="destination2" placeholder="last name" type="text" onChange={this.lastname}/>
+          <label for="destination2"></label>
         </div>
         <div className="input-field col s6 offset-s3">
-          <input id="destination" placeholder="age" type="text" onChange={this.age}/>
-          <label for="destination"></label>
+          <input id="destination2" placeholder="age" type="text" onChange={this.age}/>
+          <label for="destination2"></label>
         </div>
         <div className="input-field col s6 offset-s3">
-          <input id="destination" placeholder="location" type="text" onChange={this.location}/>
-          <label for="destination"></label>
+          <input id="destination2" placeholder="location" type="text" onChange={this.location}/>
+          <label for="destination2"></label>
         </div>
 
          <NavLink to='/newTravel' className="white-text" >
