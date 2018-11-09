@@ -11,7 +11,7 @@ class MatchPerson extends Component {
 
     return (
 
-      <div class='container' style={{overflowY: 'scroll', height: '550px'}}>        
+      <div class='container' style={{overflowY: 'scroll', height: '550px', marginLeft: '0'}}>        
         <div>
           <strong style={{fontSize: '30px', color: '#276e98'}}>{this.props.travelers.filter(traveler => traveler.id == id)[0].firstName} {this.props.travelers.filter(traveler => traveler.id == id)[0].lastName}</strong>
           {srcString ? <img className="rectangular" height="200px" src={require(`${srcString}`)} alt='avatar' /> : <img className="rectangular" height="200px" src={require(`./images/no_avatar.jpg`)} />}
