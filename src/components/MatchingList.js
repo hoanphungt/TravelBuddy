@@ -10,14 +10,19 @@ class MatchingList extends Component {
         this.props.matches.forEach(id => array.push(this.props.travelers.filter(traveler => traveler.id == id)[0]))
 
         return (
-            <div className='matchingList'>
+            <div class="container" style={{overflowY: 'scroll', height: '550px'}}>
                 <ul>
                     <li>
                         {array.map(match => (
-                            <div className="container">
-                                <Link to={`/matches/${match.id}`} id={match.id}>{match.firstName} {match.lastName}</Link> 
-                                <br></br>
-                                {match.photo ? <img className="rectangular" height="80px" align="right" src={require(`${match.photo}`)} alt='avatar' /> : <img className="rectangular" height="80px" src={require(`./images/no_avatar.jpg`)} />}
+                            <div >
+                                <div style={{flexFlow: 1}}>
+                                    <Link to={`/matches/${match.id}`} id={match.id}><strong>{match.firstName} {match.lastName}</strong></Link> 
+                                    <p>{match.age}</p>
+                                    <p>{match.preferences}</p>
+                                </div>    
+                                <div style={{flexFlow: 2}}>
+                                    <p>{match.photo ? <img className="circle" height="60px" width="80px" src={require(`${match.photo}`)} alt='avatar' /> : <img className="circle" height="60px" width="80px" src={require(`./images/no_avatar.jpg`)} />}</p> 
+                                </div>                                                  
                             </div>
                         ))}
                     </li>
