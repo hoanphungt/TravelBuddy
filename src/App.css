@@ -33,12 +33,43 @@
 }
 
 .loginform {
-  margin-top: 200px;
+  margin-top: 100px;
+}
+
+.labelform {
+  font-size: large;
+}
+
+.registerForm {
+  width: 80%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inputfield {
   color: #E59A03;
   font-size: xx-large;
+}
+
+#userIDR {
+  color: #E59A03;
+  font-size: x-large;
+}
+
+#emailR {
+  color: #E59A03;
+  font-size: x-large;
+}
+
+#passR {
+  color: #E59A03;
+  font-size: x-large;
+}
+
+#rpassR {
+  color: #E59A03;
+  font-size: x-large;
 }
 
 .nav-wrapper {

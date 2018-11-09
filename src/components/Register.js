@@ -39,31 +39,39 @@ class Register extends Component {
   password = () => {}
   render (){
     return (
-      < >
-<form>
-      <label>
-        UserID :
-        <input type="text" name="name"  onChange={this.fieldUserId}  />
-      </label>
-           <label>
-           Email :
-           <input type="text" name="name"  onChange={this.email}  />
-         </label>
-      <label>
-        Password  :
-        <input type="text" name="name" onChange={this.password} />
-      </label>
-           <label>
-           Repeat password  :
-           <input type="text" name="name" onChange={this.password} />
-         </label>
+      <div className="container">
+        <form className="registerForm">
+        <label className="labelform">
+        UserID:
+          <input type="text" name="name" className="inputfield" id="userIDR" onChange={this.fieldUserId}/>
+        </label>
+        <label className="labelform">
+        Email:
+          <input type="text" name="name" className="inputfield" id="emailR" onChange={this.email}/>
+        </label>
+        <label className="labelform">
+        Password:
+          <input type="password" name="name" className="inputfield" id="passR" onChange={this.password}/>
+        </label>
+        <label className="labelform">
+        Repeat password:
+          <input type="password" name="name" className="inputfield" id="rpassR" onChange={this.password}/>
+        </label>
+        </form>
 
-      </form>
+        <br/>
 
-      <NavLink to='/newuserinfo' className="white-text" >
-      <button className="waves-effect waves-light btn-large"  onClick={this.clicking} >Sign Up</button>
-      </NavLink>
-      </>
+        <div className="row">
+          <div className="col s2"></div>
+          <div className="col s8 offset-s1">
+            <NavLink to='/newuserinfo' className="white-text" >
+              <button className="waves-effect waves-light btn-large orange darken-1" 
+              onClick={this.clicking}><b>Sign Up</b></button>
+            </NavLink>
+          </div>
+          <div className="col s1"></div>
+        </div>
+      </div>
     )
   }
 }
