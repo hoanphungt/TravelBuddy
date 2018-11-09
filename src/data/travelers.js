@@ -127,7 +127,7 @@ const travelers = [
   },
   { 
     id: 8,
-    photo: '',
+    photo: './images/photo1.jpg',
     firstName: 'Segolene',
     lastName: 'Dumas',
     age : 57,
@@ -146,7 +146,7 @@ const travelers = [
   },
   { 
     id: 9,
-    photo: '',
+    photo: './images/23.PNG',
     firstName: 'Mirelle',
     lastName: 'Matthieu',
     age : 21,
@@ -164,7 +164,7 @@ const travelers = [
   },
   { 
     id: 10,
-    photo: '',
+    photo: './images/1.PNG',
     firstName: 'Johny',
     lastName: 'Halliday',
     age : 27,
@@ -182,7 +182,7 @@ const travelers = [
   },
   { 
     id:11,
-    photo: '',
+    photo: './images/photo2.jpg',
     firstName: 'Barnabé',
     lastName: 'Durand',
     age : 55,
@@ -200,7 +200,7 @@ const travelers = [
   },
   { 
     id: 12,
-    photo: '',
+    photo: './images/photo3.jpg',
     firstName: 'Martin',
     lastName: 'Dupond',
     age : 32,
@@ -218,7 +218,7 @@ const travelers = [
   },
   { 
     id: 13,
-    photo: '',
+    photo: './images/photo4.jpg',
     firstName: 'Robert',
     lastName: 'Dujambon',
     age : 32,
@@ -236,7 +236,7 @@ const travelers = [
   },
   { 
     id: 14,
-    photo: '',
+    photo: './images/photo5.jpg',
     firstName: 'Frederique',
     lastName: 'Desmoulins',
     age : 39,
@@ -254,7 +254,7 @@ const travelers = [
   },
   { 
     id: 15,
-    photo: '',
+    photo: './images/photo6.jpg',
     firstName: 'Ludwig',
     lastName: 'Mueller',
     age : 32,
@@ -272,7 +272,7 @@ const travelers = [
   },
   { 
     id: 16,
-    photo: '',
+    photo: './images/photo7.jpg',
     firstName: 'Bernd',
     lastName: 'Schmal',
     age : 62,
@@ -290,7 +290,7 @@ const travelers = [
   },
   { 
     id: 17,
-    photo: '',
+    photo: './images/photo8.jpg',
     firstName: 'Wolfgang',
     lastName: 'Amadeus',
     age : 32,
@@ -309,7 +309,7 @@ const travelers = [
 
   { 
     id: 18,
-    photo: '',
+    photo: './images/photo9.jpg',
     firstName: 'Korbinian',
     lastName: 'Schmidt',
     age : 45,
@@ -327,7 +327,7 @@ const travelers = [
   },
   { 
     id: 19,
-    photo: '',
+    photo: './images/images1.jpeg',
     firstName: 'Michael',
     lastName: 'Schumacher',
     age : 49,
@@ -345,7 +345,7 @@ const travelers = [
   },
   { 
     id: 20,
-    photo: '',
+    photo: './images/images2.jpeg',
     firstName: 'Detlef',
     lastName: 'Radler',
     age : 45,
@@ -363,7 +363,7 @@ const travelers = [
   },
   { 
     id: 21,
-    photo: '',
+    photo: './images/images3.jpeg',
     firstName: 'Angela',
     lastName: 'Merkel',
     age : 19,
@@ -381,7 +381,7 @@ const travelers = [
   },
   { 
     id: 22,
-    photo: '',
+    photo: './images/photo1.jpg',
     firstName: 'Helmut',
     lastName: 'Kohl',
     age : 75,
@@ -399,7 +399,7 @@ const travelers = [
   },
   { 
     id: 23,
-    photo: '',
+    photo: './images/photo2.jpg',
     firstName: 'Kaiser',
     lastName: 'Wassertopf',
     age : 52,
@@ -417,7 +417,7 @@ const travelers = [
   },
   { 
     id: 24,
-    photo: '',
+    photo: './images/photo3.jpg',
     firstName: 'Guntram',
     lastName: 'Bauer',
     age : 25,
@@ -435,7 +435,7 @@ const travelers = [
   },
   { 
     id: 25,
-    photo: '',
+    photo: './images/photo4.jpg',
     firstName: 'Margareth',
     lastName: 'Tatcher',
     age : 95,
@@ -453,7 +453,7 @@ const travelers = [
   },
   { 
     id: 26,
-    photo: '',
+    photo: './images/photo5.jpg',
     firstName: 'Donald',
     lastName: 'McDonald',
     age : 45,
@@ -471,7 +471,7 @@ const travelers = [
   },
   { 
     id: 27,
-    photo: '',
+    photo: './images/photo6.jpg',
     firstName: 'Mickel',
     lastName: 'Brdiget',
     age : 45,
@@ -489,7 +489,7 @@ const travelers = [
   },
   { 
     id: 28,
-    photo: '',
+    photo: './images/photo7.jpg',
     firstName: 'William',
     lastName: 'Tell',
     age : 25,
@@ -507,7 +507,7 @@ const travelers = [
   },
   { 
     id: 29,
-    photo: '',
+    photo: './images/photo8.jpg',
     firstName: 'Lizzie',
     lastName: 'Baggins',
     age : 25,
@@ -525,7 +525,7 @@ const travelers = [
   },
   { 
     id: 30,
-    photo: '',
+    photo: './images/photo9.jpg',
     firstName: 'Bilbo',
     lastName: 'Sacquet',
     age : 25,
@@ -579,7 +579,7 @@ const travelers = [
   },
   { 
     id: 33,
-    photo: '',
+    photo: './images/images1.jpeg',
     firstName: 'Gimli',
     lastName: 'Souscolline',
     age : 25,
@@ -597,7 +597,7 @@ const travelers = [
   },
   { 
     id: 34,
-    photo: '',
+    photo: './images/19.PNG',
     firstName: 'Donkey',
     lastName: 'Ane',
     age : 25,
@@ -616,7 +616,7 @@ const travelers = [
 
   { 
     id: 35,
-    photo: '',
+    photo: './images/images2.jpeg',
     firstName: 'Bill',
     lastName: 'Turner',
     age : 25,
@@ -634,7 +634,7 @@ const travelers = [
   },
   { 
     id: 36,
-    photo: '',
+    photo: './images/images3.jpeg',
     firstName: 'Zacharias',
     lastName: 'Eternal',
     age : 125,

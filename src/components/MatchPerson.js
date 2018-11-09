@@ -10,26 +10,32 @@ class MatchPerson extends Component {
     const srcString = this.props.travelers.filter(traveler => traveler.id == id)[0].photo
 
     return (
-      <>
-        {this.sourcePhoto}
-        <h2>
-          <strong>{this.props.travelers.filter(traveler => traveler.id == id)[0].firstName} {this.props.travelers.filter(traveler => traveler.id == id)[0].lastName}</strong>
-          {srcString ? <img src={require(`${srcString}`)} alt='avatar' /> : <h1>No Avatar</h1>}
-        </h2>
+
+      <div class='container' style={{overflowY: 'scroll', height: '550px'}}>        
         <div>
-          <strong>Age:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].age}
+          <strong style={{fontSize: '30px', color: '#276e98'}}>{this.props.travelers.filter(traveler => traveler.id == id)[0].firstName} {this.props.travelers.filter(traveler => traveler.id == id)[0].lastName}</strong>
+          {srcString ? <img className="rectangular" height="200px" src={require(`${srcString}`)} alt='avatar' /> : <img className="rectangular" height="200px" src={require(`./images/no_avatar.jpg`)} />}
         </div>
         <div>
-          <strong>Preferences:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].preferences}
+          <strong style={{color: '#276e98'}}>Age:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].age}
         </div>
+        <br></br>
         <div>
-          <strong>Feedback:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].feedback}
+          <strong style={{color: '#276e98'}}>Preferences:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].preferences}
         </div>
+        <br></br>
         <div>
-          <strong>Bio:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].bio}
+          <strong style={{color: '#276e98'}}>Feedback:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].feedback}
         </div>
-        <Link to='/matchinglist'>Go back to my matches!</Link>
-      </>
+        <br></br>
+        <div>
+          <strong style={{color: '#276e98'}}>Bio:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].bio}
+        </div>
+        <br></br>
+        <div>
+          <Link to='/matchinglist'>Go back to my matches!</Link>
+        </div>        
+      </div>
     )
   }
 }
