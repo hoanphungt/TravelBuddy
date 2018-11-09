@@ -12,6 +12,8 @@ import LogIn from './components/LogIn'
 import Register from './components/Register'
 import Profile from './components/Profile'
 import SignOut from './components/SignOut'
+import NewUserInfo from './components/NewUserInfo'
+
 class App extends Component {
   render() {
     return (
@@ -30,6 +32,8 @@ class App extends Component {
           <Route exact path="/matches/:id" component={MatchPerson} />
           <Route exact path='/profile' component={Profile} />
           <Route exact path='/signout' component={SignOut} />
+          <Route exact path='/newuserinfo' component={NewUserInfo} />
+
 
         </div>
       </BrowserRouter>
