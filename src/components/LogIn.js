@@ -71,7 +71,16 @@ signingIn = (theID) => {
 
     </div>
 
-     
+
+      /* <div className="centerButtonLogIn">
+      </div>
+
+      <div className="row">
+          <NavLink to='/register' className="white-text" >
+            <button className="waves-effect waves-light btn-large orange darken-1">Sign up</button>
+          </NavLink>
+      </div> */
+
     )
   }
 }

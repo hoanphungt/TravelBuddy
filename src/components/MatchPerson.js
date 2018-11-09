@@ -21,14 +21,14 @@ class MatchPerson extends Component {
         </div>
         <br></br>
         <div>
-          <strong style={{color: '#276e98'}}>Preferences:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].preferences}
+          <strong style={{color: '#276e98'}}>Preferences:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].preferences.join(', ')}
         </div>
         <br></br>
-        <div>
+        <div style={{textAlign: 'justify'}}>
           <strong style={{color: '#276e98'}}>Feedback:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].feedback}
         </div>
         <br></br>
-        <div>
+        <div style={{textAlign: 'justify'}}>
           <strong style={{color: '#276e98'}}>Bio:</strong> {this.props.travelers.filter(traveler => traveler.id == id)[0].bio}
         </div>
         <br></br>
