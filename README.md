@@ -4,7 +4,7 @@ A team project to build a tinder for travellers using JavaScript, React, Redux a
 
 Link to the app here: [Webapp](https://travelbuddy-123.netlify.com)
 
-The team consists of 3 developers: 
+### The team consists of 3 developers: 
 
 [Hoan Phung](https://www.linkedin.com/in/hoanphung) - Junior Full-Stack Developer (me)
 
